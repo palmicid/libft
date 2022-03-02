@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 18:40:01 by pruangde          #+#    #+#             */
-/*   Updated: 2022/02/18 01:50:50 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/03/02 21:33:27 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	if ((size_t)dest - (size_t)src < n)
 	{

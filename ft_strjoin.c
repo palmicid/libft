@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 11:20:50 by pruangde          #+#    #+#             */
-/*   Updated: 2022/02/26 16:43:07 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/03/02 22:54:53 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	else
 		len = ft_strlen(s1) + ft_strlen(s2);
 	str = (char *)ft_calloc((len + 1), sizeof(char));
+	if (!str)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s1[j])
