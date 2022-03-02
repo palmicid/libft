@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 00:22:55 by pruangde          #+#    #+#             */
-/*   Updated: 2022/02/25 23:29:11 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/03/03 00:22:09 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,6 @@ int	find_index(long int num)
 		i++;
 	}
 	return (i + p);
-}
-
-char	*newstr(long int num, int x)
-{
-	char	*s;
-
-	if (num <= 0)
-		s = (char *)ft_calloc(x, sizeof(char));
-	else
-		s = (char *)ft_calloc(x, sizeof(char));
-	return (s);
 }
 
 void	num2str(char *str, long int num, int x)
@@ -70,7 +59,9 @@ char	*ft_itoa(int n)
 
 	num = (long int)n;
 	x = find_index(n);
-	str = newstr(num, x);
+	str = (char *)ft_calloc(x, sizeof(char));
+	if (!str)
+		return (NULL);
 	num2str(str, num, x);
 	return (str);
 }

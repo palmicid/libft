@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 01:10:38 by pruangde          #+#    #+#             */
-/*   Updated: 2022/03/02 20:09:22 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/03/03 00:38:11 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 	t_list	*tmp;
 
-	new = NULL;
-	if (!f || !del)
+	if (!lst)
 		return (NULL);
+	new = NULL;
 	while (lst)
 	{
 		tmp = ft_lstnew(f(lst->content));

@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 22:49:52 by pruangde          #+#    #+#             */
-/*   Updated: 2022/02/28 00:02:46 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/03/03 00:07:23 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

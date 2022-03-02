@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 19:11:38 by pruangde          #+#    #+#             */
-/*   Updated: 2022/02/27 22:30:18 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/03/03 00:05:06 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = count_word(s, c);
 	ptstr = (char **)malloc((i + 1) * sizeof(char *));
+	if (!ptstr)
+		return (NULL);
 	ptstr[i] = NULL;
 	flen_new(s, ptstr, c);
 	add_str(s, ptstr, c);
