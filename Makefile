@@ -6,7 +6,7 @@
 #    By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 12:37:19 by pruangde          #+#    #+#              #
-#    Updated: 2022/03/03 00:45:28 by pruangde         ###   ########.fr        #
+#    Updated: 2022/03/08 15:42:47 by pruangde         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ re: fclean all
 
 norm:
 	@echo "------------------------------------"
-	@echo "EJ' Norm"
+	@echo " !!!!!!!!   NORMINETTE   !!!!!!!!"
 	@echo ""
 	@norminette -R CheckForbiddenSourceHeader ft_*.c
 	@norminette -R CheckDefine *.h
