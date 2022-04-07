@@ -1,6 +1,8 @@
 tester/
 war-mach/
 eztest/
+libftTester/
+libft-war-machine/
 
 # Prerequisites
 *.d

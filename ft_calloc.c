@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 03:24:13 by pruangde          #+#    #+#             */
-/*   Updated: 2022/02/25 15:26:26 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/04/07 23:34:22 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (size > sizeof(size_t))
+		return (NULL);
 	if (count == 0 || size == 0)
 	{
 		count = 1;
