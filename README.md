@@ -1,6 +1,9 @@
 # libft
 my 42 libft
 
+!!! update !!!
+- add GNL
+
 Got all OK
 
 tested with
