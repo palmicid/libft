@@ -6,13 +6,13 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 00:22:55 by pruangde          #+#    #+#             */
-/*   Updated: 2022/03/03 00:22:09 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/07/25 14:13:55 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	find_index(long int num)
+static int	find_index(long int num)
 {
 	int	i;
 	int	p;
@@ -30,7 +30,7 @@ int	find_index(long int num)
 	return (i + p);
 }
 
-void	num2str(char *str, long int num, int x)
+static void	num2str(char *str, long int num, int x)
 {
 	x -= 2;
 	if (num == 0)

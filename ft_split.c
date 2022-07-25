@@ -6,13 +6,13 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 19:11:38 by pruangde          #+#    #+#             */
-/*   Updated: 2022/03/03 00:05:06 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/07/25 14:16:53 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_word(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
 	size_t	i;
 
@@ -31,7 +31,7 @@ size_t	count_word(char const *s, char c)
 	return (i);
 }
 
-void	flen_new(char const *s, char **ps, char c)
+static void	flen_new(char const *s, char **ps, char c)
 {
 	size_t	i;
 	size_t	fd;
@@ -55,7 +55,7 @@ void	flen_new(char const *s, char **ps, char c)
 	}
 }
 
-void	add_str(char const *s, char **ps, char c)
+static void	add_str(char const *s, char **ps, char c)
 {
 	size_t	i;
 	size_t	fd;
