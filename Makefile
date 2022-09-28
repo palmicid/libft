@@ -6,7 +6,7 @@
 #    By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 12:37:19 by pruangde          #+#    #+#              #
-#    Updated: 2022/09/29 01:41:53 by pruangde         ###   ########.fr        #
+#    Updated: 2022/09/29 04:06:37 by pruangde         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,10 @@ re: fclean all
 
 test:
 	$(CC) maintest.c $(NAME)
+	valgrind -q --vgdb=full --leak-check=full ./a.out
+
+leak:
+	leaks --atExit -- ./a.out
 
 norm:
 	@echo "------------------------------------"

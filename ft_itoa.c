@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 00:22:55 by pruangde          #+#    #+#             */
-/*   Updated: 2022/09/29 02:45:31 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/09/29 04:09:38 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ char	*ft_itoa(int n)
 {
 	int			x;
 	char		*str;
-	//long		num;
 
 	n = (long)n;
 	x = find_index(n);

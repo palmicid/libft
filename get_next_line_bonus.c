@@ -21,7 +21,7 @@ static char	*sp_strjoin(char *s1, char *s2)
 
 	if (!s1 && !s2)
 		return (NULL);
-	len = sp_strlen(s1, 0) + sp_strlen(s2, 0);
+	len = gnl_sp_strlen(s1, 0) + gnl_sp_strlen(s2, 0);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
@@ -49,14 +49,14 @@ static char	*sp_strdup_reloc(t_lstfd *cursor)
 	char	*tmp;
 	size_t	mode;
 
-	mode = (size_t)find_n(cursor->str);
-	len = sp_strlen(cursor->str, mode);
+	mode = (size_t)gnl_find_n(cursor->str);
+	len = gnl_sp_strlen(cursor->str, mode);
 	dup = (char *)malloc((len + 1) * (sizeof(char)));
 	if (!dup)
 		return (NULL);
 	dup = ft_memcpy(dup, cursor->str, len);
 	dup[len] = '\0';
-	data_len = sp_strlen((cursor->str + len), 0);
+	data_len = gnl_sp_strlen((cursor->str + len), 0);
 	tmp = (char *)malloc((data_len + 1) * sizeof(char));
 	if (!tmp)
 		return (NULL);
@@ -86,12 +86,12 @@ static char	*rdline(t_lstfd *cursor)
 		}
 		buf[cursor->rfd] = '\0';
 		cursor->str = sp_strjoin(cursor->str, buf);
-		if (find_n(cursor->str))
+		if (gnl_find_n(cursor->str))
 			break ;
 	}
 	free(buf);
 	ret = sp_strdup_reloc(cursor);
-	if (!(sp_strlen(ret, 0)))
+	if (!(gnl_sp_strlen(ret, 0)))
 		free(ret);
 	return (ret);
 }
@@ -102,7 +102,7 @@ static t_lstfd	*new_or_find(t_lstfd *data, int fd)
 	t_lstfd	*prev;
 
 	if (!(data))
-		current_fd = create_list(fd);
+		current_fd = gnl_create_list(fd);
 	else
 	{
 		while (data)
@@ -118,7 +118,7 @@ static t_lstfd	*new_or_find(t_lstfd *data, int fd)
 				data = data->next;
 			}
 		}
-		current_fd = create_list(fd);
+		current_fd = gnl_create_list(fd);
 		prev->next = current_fd;
 	}
 	return (current_fd);
@@ -136,14 +136,14 @@ char	*get_next_line(int fd)
 	if (!data)
 		data = cursor;
 	ret = rdline(cursor);
-	if (!sp_strlen(cursor->str, 0))
+	if (!gnl_sp_strlen(cursor->str, 0))
 	{
 		free(cursor->str);
 		cursor->str = NULL;
 	}
 	if ((cursor->rfd <= 0) && !(cursor->str))
 	{
-		data = list_reloc(data, fd);
+		data = gnl_list_reloc(data, fd);
 	}
 	return (ret);
 }

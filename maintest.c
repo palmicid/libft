@@ -7,11 +7,14 @@
 int main(void)
 {
 	int	fd;
+	char *str;
 
 	fd = open("Makefile", O_RDONLY);
 	for(int i = 0; i<80; i++)
 	{
-		printf("%s", get_next_line(fd));
+		str = get_next_line(fd);
+		//printf("%s", str);
+		free(str);
 	}
 	close(fd);
 	return (0);

@@ -13,7 +13,7 @@
 #include "get_next_line_bonus.h"
 
 //mode 1 find \n , mode 0 just \0
-size_t	sp_strlen(const char *s, int mode)
+size_t	gnl_sp_strlen(const char *s, int mode)
 {
 	size_t	i;
 
@@ -34,7 +34,7 @@ size_t	sp_strlen(const char *s, int mode)
 	return (i);
 }
 
-int	find_n(char *s)
+int	gnl_find_n(char *s)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ int	find_n(char *s)
 	return (0);
 }
 
-t_lstfd	*create_list(int fd)
+t_lstfd	*gnl_create_list(int fd)
 {
 	t_lstfd	*new_data;
 
@@ -64,7 +64,7 @@ t_lstfd	*create_list(int fd)
 	return (new_data);
 }
 
-t_lstfd	*list_reloc(t_lstfd *data, int fd)
+t_lstfd	*gnl_list_reloc(t_lstfd *data, int fd)
 {
 	t_lstfd	*prev;
 	t_lstfd	*finder;
