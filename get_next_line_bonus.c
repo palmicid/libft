@@ -12,7 +12,7 @@
 
 #include "get_next_line_bonus.h"
 
-char	*sp_strjoin(char *s1, char *s2)
+static char	*sp_strjoin(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -41,7 +41,7 @@ char	*sp_strjoin(char *s1, char *s2)
 	return (str);
 }
 
-char	*sp_strdup_reloc(t_lstfd *cursor)
+static char	*sp_strdup_reloc(t_lstfd *cursor)
 {
 	size_t	data_len;
 	size_t	len;
@@ -68,7 +68,7 @@ char	*sp_strdup_reloc(t_lstfd *cursor)
 	return (dup);
 }
 
-char	*rdline(t_lstfd *cursor)
+static char	*rdline(t_lstfd *cursor)
 {
 	char	*buf;
 	char	*ret;
@@ -96,7 +96,7 @@ char	*rdline(t_lstfd *cursor)
 	return (ret);
 }
 
-t_lstfd	*new_or_find(t_lstfd *data, int fd)
+static t_lstfd	*new_or_find(t_lstfd *data, int fd)
 {
 	t_lstfd	*current_fd;
 	t_lstfd	*prev;

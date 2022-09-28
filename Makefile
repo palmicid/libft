@@ -3,14 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pruangde <pruangde@student.42bangkok.co    +#+  +:+       +#+         #
+#    By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 12:37:19 by pruangde          #+#    #+#              #
-#    Updated: 2022/07/25 16:45:39 by pruangde         ###   ########.fr        #
+#    Updated: 2022/09/29 01:41:53 by pruangde         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+UNAME = uname -s
+
+ifeq ($(UNAME), Linux)
+	CC = clang
+else
+	CC = gcc
+endif
+
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 NAME = libft.a
@@ -56,6 +63,9 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+test:
+	$(CC) maintest.c $(NAME)
 
 norm:
 	@echo "------------------------------------"

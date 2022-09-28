@@ -6,13 +6,13 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 00:22:55 by pruangde          #+#    #+#             */
-/*   Updated: 2022/07/25 14:13:55 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/09/29 02:45:31 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	find_index(long int num)
+static int	find_index(long num)
 {
 	int	i;
 	int	p;
@@ -30,7 +30,7 @@ static int	find_index(long int num)
 	return (i + p);
 }
 
-static void	num2str(char *str, long int num, int x)
+static void	num2str(char *str, long num, int x)
 {
 	x -= 2;
 	if (num == 0)
@@ -55,13 +55,13 @@ char	*ft_itoa(int n)
 {
 	int			x;
 	char		*str;
-	long int	num;
+	//long		num;
 
-	num = (long int)n;
+	n = (long)n;
 	x = find_index(n);
 	str = (char *)ft_calloc(x, sizeof(char));
 	if (!str)
 		return (NULL);
-	num2str(str, num, x);
+	num2str(str, n, x);
 	return (str);
 }
