@@ -12,7 +12,7 @@
 
 #include "get_next_line_bonus.h"
 
-static char	*sp_strjoin(char *s1, char *s2)
+char	*gnl_sp_strjoin(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -41,7 +41,7 @@ static char	*sp_strjoin(char *s1, char *s2)
 	return (str);
 }
 
-static char	*sp_strdup_reloc(t_lstfd *cursor)
+char	*gnl_sp_strdup_reloc(t_lstfd *cursor)
 {
 	size_t	data_len;
 	size_t	len;
@@ -68,7 +68,7 @@ static char	*sp_strdup_reloc(t_lstfd *cursor)
 	return (dup);
 }
 
-static char	*rdline(t_lstfd *cursor)
+char	*gnl_rdline(t_lstfd *cursor)
 {
 	char	*buf;
 	char	*ret;
@@ -85,18 +85,18 @@ static char	*rdline(t_lstfd *cursor)
 			return (NULL);
 		}
 		buf[cursor->rfd] = '\0';
-		cursor->str = sp_strjoin(cursor->str, buf);
+		cursor->str = gnl_sp_strjoin(cursor->str, buf);
 		if (gnl_find_n(cursor->str))
 			break ;
 	}
 	free(buf);
-	ret = sp_strdup_reloc(cursor);
+	ret = gnl_sp_strdup_reloc(cursor);
 	if (!(gnl_sp_strlen(ret, 0)))
 		free(ret);
 	return (ret);
 }
 
-static t_lstfd	*new_or_find(t_lstfd *data, int fd)
+t_lstfd *gnl_new_or_find(t_lstfd *data, int fd)
 {
 	t_lstfd	*current_fd;
 	t_lstfd	*prev;
@@ -132,10 +132,10 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	cursor = new_or_find(data, fd);
+	cursor = gnl_new_or_find(data, fd);
 	if (!data)
 		data = cursor;
-	ret = rdline(cursor);
+	ret = gnl_rdline(cursor);
 	if (!gnl_sp_strlen(cursor->str, 0))
 	{
 		free(cursor->str);
