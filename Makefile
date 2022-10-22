@@ -54,7 +54,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: $(OBJS) $(BN_OBJS)
-	ar -rcs $(NAME) $(OBJS) $(BN_OBJS)
+	@ar -rcs $(NAME) $(OBJS) $(BN_OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BN_OBJS)
