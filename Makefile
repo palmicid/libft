@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+         #
+#    By: pruangde <pruangde@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 12:37:19 by pruangde          #+#    #+#              #
-#    Updated: 2022/10/07 18:34:06 by pruangde         ###   ########.fr        #
+#    Updated: 2022/10/27 01:39:18 by pruangde         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ MEM_LIB = ft_memset.c ft_bzero.c ft_memmove.c ft_memchr.c ft_memcmp.c \
 		  ft_memcpy.c ft_calloc.c
 
 P2_LIB = ft_itoa.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
-		 ft_strmapi.c ft_striteri.c
+		 ft_strmapi.c ft_striteri.c ssp_strjoin.c
 P2FD_LIB = ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BN_LIB = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
