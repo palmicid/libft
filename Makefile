@@ -6,7 +6,7 @@
 #    By: pruangde <pruangde@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 12:37:19 by pruangde          #+#    #+#              #
-#    Updated: 2022/10/27 01:39:18 by pruangde         ###   ########.fr        #
+#    Updated: 2022/10/27 15:58:21 by pruangde         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ norm:
 	@echo "------------------------------------"
 	@echo " !!!!!!!!   NORMINETTE   !!!!!!!!"
 	@echo ""
-	@norminette -R CheckForbiddenSourceHeader ft_*.c
+	@norminette -R CheckForbiddenSourceHeader *.c
 	@norminette -R CheckDefine *.h
 	@echo ""
 	@echo "------------------------------------"

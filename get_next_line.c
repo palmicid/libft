@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 04:26:37 by pruangde          #+#    #+#             */
-/*   Updated: 2022/10/07 18:38:20 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/10/27 16:04:14 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char	*gnl_rdline(t_lstfd *cursor)
 	return (ret);
 }
 
-t_lstfd *gnl_new_or_find(t_lstfd *data, int fd)
+t_lstfd	*gnl_new_or_find(t_lstfd *data, int fd)
 {
 	t_lstfd	*current_fd;
 	t_lstfd	*prev;

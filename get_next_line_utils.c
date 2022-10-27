@@ -6,14 +6,14 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 04:27:19 by pruangde          #+#    #+#             */
-/*   Updated: 2022/10/07 18:39:08 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/10/27 16:05:09 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //mode 1 find \n , mode 0 just \0
-size_t gnl_sp_strlen(const char *s, int mode)
+size_t	gnl_sp_strlen(const char *s, int mode)
 {
 	size_t	i;
 
@@ -34,7 +34,7 @@ size_t gnl_sp_strlen(const char *s, int mode)
 	return (i);
 }
 
-int gnl_find_n(char *s)
+int	gnl_find_n(char *s)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ int gnl_find_n(char *s)
 	return (0);
 }
 
-t_lstfd *gnl_create_list(int fd)
+t_lstfd	*gnl_create_list(int fd)
 {
 	t_lstfd	*new_data;
 
@@ -64,7 +64,7 @@ t_lstfd *gnl_create_list(int fd)
 	return (new_data);
 }
 
-t_lstfd *gnl_list_reloc(t_lstfd *data, int fd)
+t_lstfd	*gnl_list_reloc(t_lstfd *data, int fd)
 {
 	t_lstfd	*prev;
 	t_lstfd	*finder;
