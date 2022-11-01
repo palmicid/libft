@@ -15,6 +15,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <fcntl.h>
 # include "get_next_line.h"
 
 typedef struct s_list
