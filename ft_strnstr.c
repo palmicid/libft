@@ -34,3 +34,20 @@ char	*ft_strnstr(const char *str, const char *nd, size_t len)
 	}
 	return (NULL);
 }
+
+int	ft_strlaststr(char *str, char *tofind)
+{
+	int	i;
+	int	j;
+
+	i = ft_strlen(str) - 1;
+	j = ft_strlen(tofind) - 1;
+	while (j >= 0 && i >= 0)
+	{
+		if (str[i] != tofind[j])
+			return (0);
+		i--;
+		j--;
+	}
+	return (1);
+}

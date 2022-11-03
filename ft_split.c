@@ -96,3 +96,15 @@ char	**ft_split(char const *s, char c)
 	add_str(s, ptstr, c);
 	return (ptstr);
 }
+
+int		count_element_p2p(char **p2p)
+{
+	int	i;
+	
+	i = 0;
+	while (p2p[i])
+	{
+		i++;
+	}
+	return (i);
+}

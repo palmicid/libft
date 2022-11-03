@@ -63,6 +63,10 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 char	*ssp_strjoin(char *s1, char *s2, int c_s1, int c_s2);
+int		ft_strlaststr(char *str, char *tofind);
+int		count_element_p2p(char **p2p);
+char	**ft_splitdup(char **origin);
+void	ft_free_p2p_char(char **ptr);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
