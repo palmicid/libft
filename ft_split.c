@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: pruangde <pruangde@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 19:11:38 by pruangde          #+#    #+#             */
-/*   Updated: 2022/08/07 18:51:58 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/11/15 20:21:56 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,10 +97,10 @@ char	**ft_split(char const *s, char c)
 	return (ptstr);
 }
 
-int		count_element_p2p(char **p2p)
+int	count_element_p2p(char **p2p)
 {
 	int	i;
-	
+
 	i = 0;
 	while (p2p[i])
 	{

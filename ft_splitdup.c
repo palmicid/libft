@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_splitdup.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
+/*   By: pruangde <pruangde@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 11:26:22 by pruangde          #+#    #+#             */
-/*   Updated: 2022/11/03 11:29:24 by pruangde         ###   ########.fr       */
+/*   Updated: 2022/11/15 20:22:11 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ char	**ft_splitdup(char **origin)
 		i++;
 	}
 	return (new);
-
 }
