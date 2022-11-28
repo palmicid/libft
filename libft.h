@@ -26,6 +26,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+// hard and many file will be back to fix this
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -34,6 +35,7 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -67,6 +69,7 @@ int		ft_strlaststr(char *str, char *tofind);
 int		count_element_p2p(char **p2p);
 char	**ft_splitdup(char **origin);
 void	ft_free_p2p_char(char **ptr);
+int		sp_digit_pm(int c);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

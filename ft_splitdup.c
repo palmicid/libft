@@ -20,6 +20,8 @@ char	**ft_splitdup(char **origin)
 
 	tmp = count_element_p2p(origin);
 	new = (char **)malloc((tmp + 1) * sizeof(char *));
+	if (!new)
+		return (NULL);
 	new[tmp] = 0;
 	i = 0;
 	while (i < tmp)
