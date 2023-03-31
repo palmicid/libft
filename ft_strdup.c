@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:13:24 by pruangde          #+#    #+#             */
-/*   Updated: 2023/03/30 03:33:29 by pruangde         ###   ########.fr       */
+/*   Updated: 2023/03/31 13:58:08 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strndup(const char *s, size_t n)
 	dup = (char *)malloc(sizeof(char) * (n + 1));
 	if (!dup)
 		return (NULL);
-	ft_memcpy(dup, s, n);
+	dup = ft_memcpy(dup, s, n);
 	dup[n] = '\0';
 	return (dup);
 }

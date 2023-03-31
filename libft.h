@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 00:35:49 by pruangde          #+#    #+#             */
-/*   Updated: 2023/03/30 03:34:17 by pruangde         ###   ########.fr       */
+/*   Updated: 2023/03/31 13:44:12 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <fcntl.h>
+# include <stdio.h>
 # include "get_next_line.h"
 
 typedef struct s_list
