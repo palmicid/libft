@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 12:36:52 by pruangde          #+#    #+#             */
-/*   Updated: 2022/02/16 23:30:37 by pruangde         ###   ########.fr       */
+/*   Updated: 2023/05/11 08:01:56 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (i);
 	while (s[i] != '\0')
 	{
 		i++;

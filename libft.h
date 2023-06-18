@@ -6,7 +6,7 @@
 /*   By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 00:35:49 by pruangde          #+#    #+#             */
-/*   Updated: 2023/03/31 13:44:12 by pruangde         ###   ########.fr       */
+/*   Updated: 2023/06/14 20:15:22 by pruangde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstlen);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(char *s1, char *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *nd, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
@@ -56,6 +56,7 @@ char	*ft_strndup(const char *s, size_t n);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strnjoin(char *s1, char *s2, size_t n);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
@@ -67,11 +68,14 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 char	*ssp_strjoin(char *s1, char *s2, int c_s1, int c_s2);
+char	*ssp_strnjoin(char *s1, char *s2, size_t n, int mode1);
 int		ft_strlaststr(char *str, char *tofind);
 int		count_element_p2p(char **p2p);
 char	**ft_splitdup(char **origin);
 void	ft_free_p2p_char(char **ptr);
+char	*ft_freemanycharptr(char *ptr1, char **ptr2, char **ptr3, char **ptr4);
 int		sp_digit_pm(int c);
+int		sp_digit_pm_str(char *str);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

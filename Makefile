@@ -3,20 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pruangde <pruangde@student.42bangkok.co    +#+  +:+       +#+         #
+#    By: pruangde <pruangde@student.42bangkok.com>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/17 12:37:19 by pruangde          #+#    #+#              #
-#    Updated: 2023/03/04 16:57:02 by pruangde         ###   ########.fr        #
+#    Updated: 2023/06/18 12:42:28 by pruangde         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 UNAME = uname -s
-
-ifeq ($(UNAME), Linux)
-	CC = clang
-else
-	CC = gcc
-endif
 
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
@@ -38,10 +32,8 @@ BN_LIB = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.
 
 GNL = get_next_line.c get_next_line_utils.c
 
-SRCS = $(IS_LIB) $(TO_LIB) $(MEM_LIB) $(STR_LIB) $(P2_LIB) $(P2FD_LIB) $(GNL)
+SRCS = $(IS_LIB) $(TO_LIB) $(MEM_LIB) $(STR_LIB) $(P2_LIB) $(P2FD_LIB) $(GNL) $(BN_LIB)
 OBJS = $(SRCS:.c=.o)
-
-BN_OBJS = $(BN_LIB:.c=.o)
 
 .PHONY: all clean fclean re bonus
 
@@ -53,23 +45,20 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(OBJS) $(BN_OBJS)
-	@ar -rcs $(NAME) $(OBJS) $(BN_OBJS)
-
 clean:
-	$(RM) $(OBJS) $(BN_OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-test:
-	$(CC) maintest.c $(NAME)
-	valgrind --vgdb=no --leak-check=full --show-leak-kinds=all ./a.out
+# test:
+# 	$(CC) maintest.c $(NAME)
+# 	valgrind --vgdb=no --leak-check=full --show-leak-kinds=all ./a.out
 
-leak:
-	leaks --atExit -- ./a.out
+# leak:
+# 	leaks --atExit -- ./a.out
 
 norm:
 	@echo "------------------------------------"
@@ -81,3 +70,20 @@ norm:
 	@norminette -R CheckDefine *.h
 	@echo ""
 	@echo "------------------------------------"
+
+#	setting vscode
+#		Render Whitespace --> all
+#		indentation
+#	vim in .vimrc
+#		unlet! skip_defaults_vim
+# 		ource $VIMRUNTIME/defaults.vim
+
+#		let g:user42 = 'pruangde'
+#		let g:mail42 = 'pruangde@student.42bangkok.com'
+
+#		set autoindent
+#		set smartindent
+#		set background=dark
+#		set tabstop=4
+#		set shiftwidth=4
+#		syntax on
